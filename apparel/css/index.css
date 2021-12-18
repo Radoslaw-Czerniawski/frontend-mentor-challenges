@@ -195,6 +195,7 @@ to the left (baseline) and  */
     border-radius: 5rem;
     margin-left: 3.2rem;
     font-size: 1.6rem;
+    background-color: var(--pink-gradient);
 }
 
 .content-main_form-input:focus {
