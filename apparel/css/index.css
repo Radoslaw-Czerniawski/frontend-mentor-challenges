@@ -1,0 +1,329 @@
+@import url(./reset.css);
+
+:root {
+    font-size: 62.5%;
+    --dark-greyish-red: hsl(0, 6%, 24%);
+    --desaturated-red: hsl(0, 36%, 70%);
+    --desaturated-red-opacity: hsl(0, 36%, 70%, .3);
+    --soft-red: hsl(0, 93%, 68%, .8);
+    --dark-greyish: hsl(0, 6%, 24%);
+    --pink-gradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.harold {
+    height: 10rem;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner-wrapper {
+    width: 42.7%;
+}
+
+.banner {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Added so background's opacity could had been changed */
+.content::before {
+    content: "";
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-repeat: repeat;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .6;
+}
+
+/* content that takes up 58% of screen's width centers
+   horizontally and vertically the main element */
+.content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 57%;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+/* content-wrapper aligns all main children in a column
+to the left (baseline) and  */
+.content-wrapper {
+    position: relative;
+    flex: 1;
+    margin-top: 6.5rem;
+    max-width: 44.5rem;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.logo-image {
+    height: 3.3rem;
+}
+
+.logo-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    background: white;
+    background: var(--desaturated-red-opacity);
+    color: var(--desaturated-red);
+    border: none;
+    cursor: pointer;
+}
+
+.logo-inactive {
+    background: white;
+    color: black;
+}
+
+.menu-list {
+    position: absolute;
+    right: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    height: 4rem;
+    width: 20rem;
+    border-right: 2px solid var(--desaturated-red);
+    background: var(--desaturated-red-opacity);
+    color: var(--desaturated-red);
+}
+
+.list-hidden {
+    display: none;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--desaturated-red);
+    font-weight: 700;
+    user-select: none;
+}
+
+.logo a:hover {
+    color: white;
+}
+
+
+.content-main {
+    margin-top: 10rem;
+}
+
+.content-main_heading {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-main_heading-announcment {
+    font-size: 6.5rem;
+    letter-spacing: 1.7rem;
+    padding-top: .5rem;
+}
+
+.content-main_heading .first {
+    font-weight: 300;
+    color: var(--desaturated-red);
+}
+
+.content-main_heading .second {
+    font-weight: 600;
+    color: var(--dark-greyish);
+}
+
+.content-main_message {
+    margin-top: 2.5rem;
+    font-size: 1.6rem;
+    word-spacing: normal;
+    line-height: 2;
+    color: var(--desaturated-red);
+}
+
+.content-main_form {
+    margin-top: 5rem;
+
+    flex: 1;
+    min-width: 30%;
+    min-width: 5rem;
+    height: 5.5rem;
+    display: flex;
+    border-radius: 5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.normal {
+    border: 1px solid var(--desaturated-red-opacity);
+}
+
+.error {
+    border: 2px solid var(--soft-red);
+}
+
+::placeholder{
+    color: var(--desaturated-red-opacity);
+}
+
+.content-main_form-input {
+    flex: 1 1 75%;
+    border: none;
+    border-radius: 5rem;
+    margin-left: 3.2rem;
+    font-size: 1.6rem;
+}
+
+.content-main_form-input:focus {
+    outline: none;
+}
+
+.content-main_form-button {
+    flex: 1 1 25%;
+    height: 100%;
+    width: 100rem;
+    background: var(--pink-gradient);
+    border: none;
+    border-radius: 5rem;
+    box-shadow: -5px 15px 20px 2px hsl(0, 36%, 70%, .3);
+    cursor: pointer;
+}
+
+.content-main_form-button:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.content-main_form-button:active {
+    transform: translateZ(.3rem);
+}
+
+.content-main_error-message {
+    margin-left: 3.2rem;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--soft-red);
+}
+
+.content-main_form-error-image {
+    height: 2.6rem;
+    width: 2.6rem;
+    margin-right: 1.4rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.logo-mobile {
+    display: none;
+}
+
+.banner-mobile-wrapper {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .content-wrapper{
+        max-width: 35.5rem;
+    }
+    .content-main_heading-announcment {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 749px) {
+    .banner {
+        display: none;
+    }
+    .content-wrapper {
+        margin: 0;
+    }
+    .logo {
+        display: none;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .logo-mobile {
+        display: flex;
+        align-items: center;
+        min-height: 12.5rem;
+    }
+
+    .logo-mobile-image {
+        margin-left: 8%;
+    }
+
+    .banner-mobile-wrapper {
+        display: inline-block;
+        width: 100%;
+        height: 30rem;
+    }
+
+    .banner-mobile {
+        object-position: 0 -2rem;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .content-wrapper {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .content-main {
+        text-align: center;
+        margin-bottom: 4rem;
+        margin-top: 6rem;
+    }
+
+    .content-main_heading {
+        justify-content: center;
+    }
+
+    .content-main_heading-announcment {
+        font-size: 4rem;
+    }
+
+    .content-main_form {
+        margin-top: 3rem;
+    }
+
+    .content::before {
+        content: none;
+    }
+
+}

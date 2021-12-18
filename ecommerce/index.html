@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body>
+    <div class="modal modal-invisible">
+        <div class="modal-wrapper">
+            <div class="modal__exit-wrapper">
+                <img class="modal__exit-image" src="./images/icon-close.svg" alt="One of four shoes' photos."/>
+            </div>
+
+            <div class="modal__head-image-wrapper">
+                <div class="modal__previous-image-wrapper"><img class="modal__previous-image" src="./images/icon-previous.svg" alt="One of four shoes' photos."/></div>
+                <img class="modal__head-image" src="./images/image-product-1.jpg" alt="One of four shoes' photos."/>
+                <div class="modal__next-image-wrapper"><img class="modal__next-image" src="./images/icon-next.svg" alt="One of four shoes' photos."/></div>
+            </div>
+
+            <div class="modal__miniatures-wrapper">
+                <div class="modal__miniature-wrapper">
+                    <a class="modal-miniature modal-miniature-active" href="#"><img src="./images/image-product-1-thumbnail.jpg" class="modal__miniature"></a>
+                </div>
+                <div class="modal__miniature-wrapper">
+                    <a class="modal-miniature" href="#"><img src="./images/image-product-2-thumbnail.jpg" class="modal__miniature"></a>
+                </div>
+                <div class="modal__miniature-wrapper">
+                    <a class="modal-miniature" href="#"><img src="./images/image-product-3-thumbnail.jpg" class="modal__miniature"></a>
+                </div>
+                <div class="modal__miniature-wrapper">
+                    <a class="modal-miniature" href="#"><img src="./images/image-product-4-thumbnail.jpg" class="modal__miniature"></a>
+                </div>
+        </div>
+        </div>
+    </div>
+
+    <nav class="site-nav">
+        <div class="site-nav__left-wrapper">
+            <header class="site-nav__left-logo">
+                <img class="site-nav__left-logo__img" src="./images/logo.svg" alt="sneakers">
+            </header>
+            <ul class="site-nav__links">
+                <li><a class="site-nav__links-link link-active" href="#">Collections</a></li>
+                <li><a class="site-nav__links-link" href="#">Men</a></li>
+                <li><a class="site-nav__links-link" href="#">Women</a></li>
+                <li><a class="site-nav__links-link" href="#">About</a></li>
+                <li><a class="site-nav__links-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="site-nav__menu">
+            <a href="#">
+                <img src="./images/icon-cart.svg" class="site-nav__menu-cart">
+                <div class="site-nav__menu-cart-menu">
+                    <div class="site-nav__menu-cart-menu__cart"><span>Cart</span></div>
+                    <div class="site-nav__menu-cart-menu__message"><span>Your cart is empty.</span></div>
+                </div>
+            </a>
+            <a class="site-nav__menu-active-user" href="#"><img src="./images/image-avatar.png" class="site-nav__menu-user"></a>
+        </div>
+    </nav>
+
+    <main class="site-main">
+        <aside class="site-main__aside">
+            <div class="site-main__aside__head-image-wrapper">
+                <img class="site-main__aside__head-image" src="./images/image-product-1.jpg" alt="One of four shoes' photos."/>
+            </div>
+
+            <div class="site-main__aside__miniatures-wrapper">
+                <div class="site-main__aside__miniature-wrapper">
+                    <a class="miniature miniature-active" href="#"><img src="./images/image-product-1-thumbnail.jpg" class="site-main__aside__miniature"></a>
+                </div>
+                <div class="site-main__aside__miniature-wrapper">
+                    <a class="miniature" href="#"><img src="./images/image-product-2-thumbnail.jpg" class="site-main__aside__miniature"></a>
+                </div>
+                <div class="site-main__aside__miniature-wrapper">
+                    <a class="miniature" href="#"><img src="./images/image-product-3-thumbnail.jpg" class="site-main__aside__miniature"></a>
+                </div>
+                <div class="site-main__aside__miniature-wrapper">
+                    <a class="miniature" href="#"><img src="./images/image-product-4-thumbnail.jpg" class="site-main__aside__miniature"></a>
+                </div>
+            </div>
+        </aside>
+
+        <div class="site-main__content">
+            <h1 class="site-main__content-title">
+                <span class="site-main__content-title__company">SNEAKER COMPANY</span>
+                <span class="site-main__content-title__product">Fall Limited Edition Sneakers</span>
+            </h1>
+
+            <p class="site-main__content-description">
+                These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
+            </p>
+
+            <div class="site-main__content-pricing">
+                <span class="site-main__content-pricing__current">$125.00</span>
+                <div class="site-main__content-pricing__wrapper-discount">
+                    <span class="site-main__content-pricing__discount">50%</span>
+                </div>
+                <span class="site-main__content-pricing__previous">$250.00</span>
+            </div>
+
+            <div class="site-main__content-user-actions">
+                <div class="site-main__content-user-actions__amount">
+                    <button class="site-main__content-user-actions__amount-remove">
+                        <img src="./images/icon-minus.svg" alt="Minus button">
+                    </button>
+
+                    <span class="site-main__content-user-actions__amount-current">0</span>
+
+                    <button class="site-main__content-user-actions__amount-add"><img src="./images/icon-plus.svg" alt="Plus Button"></button>
+                </div>
+
+                <button class="site-main__content-user-actions__cart-add">
+                    <img src="./images/icon-cart copy.svg" class="site-main__content-user-actions__cart-add-img">
+                    <span class="site-main__content-user-actions__cart-add-text">Add to cart</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/index.js" type="module"></script>
+</body>
+</html>

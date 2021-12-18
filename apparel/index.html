@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+        <title>Frontend Mentor | Base Apparel coming soon page</title>
+        <link rel="stylesheet" href="./css/index.css" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap""
+        rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/3b77528863.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="logo-mobile">
+                <img class="logo-mobile-image" src="./images/logo.svg" alt="Site Logo" />
+            </header>
+
+            <div class="banner-mobile-wrapper">
+                <img
+                    class="banner-mobile"
+                    src="./images/hero-desktop.jpg"
+                    width="610"
+                    height="800"
+                    alt="Image of apparel brand"
+                />
+            </div>
+
+            <article class="content">
+                <div class="content-wrapper">
+                    <header class="logo">
+                        <div class="logo-wrapper">
+                            <img class="logo-image" src="./images/logo.svg" alt="Site Logo" />
+                        </div>
+                        <div class="logo-menu logo-inactive"><i class="fas fa-bars"></i></div>
+                        <div class="menu-list list-hidden"><a href="./aboutUs.html">About Us</a></div>
+                    </header>
+
+                    <main class="content-main">
+                        <h1 class="content-main_heading">
+                            <span class="content-main_heading-announcment first">WE'RE</span>
+
+                            <span class="content-main_heading-announcment second">COMING SOON</span>
+                        </h1>
+
+                        <p class="content-main_message">
+                            Hello fellow shoppers! We're currently building our new fashion store.
+                            Add your email below to stay up-to-date with announcements and our
+                            launch deals.
+                        </p>
+
+                        <form class="content-main_form normal" id="form1">
+                            <input class="content-main_form-input" placeholder="Email Adress" />
+
+                            <img
+                                class="content-main_form-error-image hidden"
+                                src="./images/icon-error.svg"
+                                alt="Error image"
+                            />
+
+                            <button class="content-main_form-button">
+                                <img
+                                    class="content-main_form-button-img"
+                                    src="./images/icon-arrow.svg"
+                                    alt="Sumbit Arrow"
+                                />
+                            </button>
+                        </form>
+                        <p class="content-main_error-message hidden">
+                            Your e-mail adress input is invalid!
+                        </p>
+                    </main>
+                </div>
+            </article>
+
+            <div class="banner-wrapper">
+                <img
+                    class="banner"
+                    src="./images/hero-desktop.jpg"
+                    width="610"
+                    height="800"
+                    alt="Image of apparel brand"
+                />
+            </div>
+        </div>
+        <script src="./js/index.js" type="module"></script>
+    </body>
+</html>
